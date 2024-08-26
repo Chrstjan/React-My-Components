@@ -1,0 +1,26 @@
+@use "../../../styles/variables" as v;
+
+.hamburger {
+    display: block;
+
+    @media (min-width: 1200px) {
+        display: none;
+    }
+
+    .bar {
+        display: block;
+        margin: 4px 7px;
+        width: 24px;
+        height: 7px;
+        background: v.$main-white-color;
+        border-radius: 3px;
+
+        &.dark {
+            background: v.$main-dark-color;
+        }
+
+        &.light {
+            background: v.$main-white-color;
+        }
+    }
+}
