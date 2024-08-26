@@ -4,7 +4,7 @@ import { Burgermenu } from "./components/Navbar/Burgermenu/Burgermenu";
 function App() {
   return (
     <>
-      <Burgermenu theme='dark'/>
+      <Burgermenu theme="dark" />
     </>
   );
 }
