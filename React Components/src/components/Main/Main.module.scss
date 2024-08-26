@@ -1,0 +1,11 @@
+.mainStyling {
+  &.dark {
+    background: #1c1c1c;
+    color: #ebe4e4;
+  }
+
+  &.light {
+    background: #fff;
+    color: #1c1c1c;
+  }
+}

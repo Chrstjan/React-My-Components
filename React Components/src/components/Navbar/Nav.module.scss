@@ -1,0 +1,14 @@
+@use "../../styles/mixins" as m;
+
+.navStyling {
+  @include m.flexBox(row, space-between, center);
+  padding: 0.4rem 0rem;
+
+  &.dark {
+    background: #1c1c1c;
+  }
+
+  &.light {
+    background: #eee;
+  }
+}

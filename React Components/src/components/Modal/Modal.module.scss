@@ -1,0 +1,52 @@
+.overlayStyling {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #2c2c2c80;
+}
+
+.modalStyling {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  border-radius: 7px;
+  width: 80%;
+  height: 80%;
+  background: #29263d88;
+  border: 3px solid #000;
+
+  &.darkMode {
+    background: #1c1c1c;
+    border: 3px solid #fff7f7;
+
+    .modalBtn {
+      color: #fff;
+    }
+  }
+
+  &.lightMode {
+    background: #cfcbcb;
+
+    .modalBtn {
+      color: #1c1c1c;
+    }
+  }
+
+  .modalBtn {
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    border: 0;
+    background: transparent;
+    font-size: 20px;
+    padding: 0.2rem 0.6rem;
+
+    &:hover {
+      scale: 1.2;
+      cursor: pointer;
+    }
+  }
+}
