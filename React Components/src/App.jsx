@@ -1,20 +1,44 @@
+import { useEffect, useState } from "react";
 import "./App.scss";
-import { Main } from "./components/Main/Main";
-import { Modal } from "./components/Modal/Modal";
-import { Burgermenu } from "./components/Navbar/Burgermenu/Burgermenu";
-import { Nav } from "./components/Navbar/Nav";
+import { LandingPage } from "./pages/LandingPage";
+import { AboutPage } from "./pages/AboutPage";
 
 function App() {
-  return (
-    <>
-      <Nav theme="dark">
-        <Burgermenu theme="light" />
-      </Nav>
-      <Main theme="light">
-        <Modal theme="darkMode"></Modal>
-      </Main>
-    </>
-  );
+  const [currentPage, setCurrentPage] = useState("front-page");
+
+  useEffect(() => {
+    document.title = currentPage;
+  })
+
+  if (currentPage == "front-page") {
+    return (
+      <>
+        <LandingPage />
+      </>
+    )
+  }
+
+  if (currentPage == "about-page") {
+    return (
+      <>
+        <AboutPage />
+      </>
+    )
+  }
+
+  else {
+    <h4>Page not found</h4>
+  }
+  // return (
+  //   <>
+  //     <Nav theme="dark">
+  //       <Burgermenu theme="light" />
+  //     </Nav>
+  //     <Main theme="light">
+  //       <Modal theme="darkMode"></Modal>
+  //     </Main>
+  //   </>
+  // );
 }
 
 export default App;
