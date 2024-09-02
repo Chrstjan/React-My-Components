@@ -1,0 +1,46 @@
+.switchStyling {
+  border: 0;
+  background: transparent;
+
+  .imageContainer {
+    display: block;
+    position: relative;
+    background: #fff;
+    border: 2px solid #74736f;
+    width: 40px;
+    height: 17px;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+
+    &.darkContainer {
+      background: #222;
+    }
+
+    &.lightContainer {
+      background: lightblue;
+    }
+
+    .dot {
+      display: block;
+      width: 19px;
+      height: 19px;
+      border-radius: 100%;
+      background: #737481;
+      position: absolute;
+      bottom: 11%;
+      transition: left 300ms ease-in-out, right 300ms ease-in-out;
+
+      &.darkMode {
+        right: 4%;
+        left: auto;
+        background: #fff;
+      }
+
+      &.lightMode {
+        left: 4%;
+        right: auto;
+        background: #e9e91a;
+      }
+    }
+  }
+}
